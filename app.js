@@ -11,3 +11,12 @@ fetch('/Users/colebossert/Documents/GitHub/high-country-map/data/point.geojson')
         l.bindPopup(f.properties.title || 'No title')
     }).addTo(map);
   });
+  fetch('data/skiing.geojson')
+  .then(r => r.json())
+  .then(geo => {
+    L.geoJSON(geo, {
+      pointToLayer: (_, latlng) =>
+        L.circleMarker(latlng, { radius:6, color:'#FF7000' }),
+      onEachFeature: (f,l) => l.bindPopup(f.properties.name || 'Brewery')
+    }).addTo(map);
+  });
