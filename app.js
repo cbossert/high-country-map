@@ -3,7 +3,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution:'© OSM'
 }).addTo(map);
 // Test layer: shows one marker with a popup
-fetch('data/point.geojson')
+fetch('/Users/colebossert/Documents/GitHub/high-country-map/data/point.geojson')
   .then(r => r.json())
   .then(geo => {
     L.geoJSON(geo, {
