@@ -1,0 +1,10 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-81.678, 36.215] },
+      "properties": { "title": "Boone-ish" }
+    }
+  ]
+}
