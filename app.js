@@ -17,6 +17,6 @@ fetch('/Users/colebossert/Documents/GitHub/high-country-map/data/point.geojson')
     L.geoJSON(geo, {
       pointToLayer: (_, latlng) =>
         L.circleMarker(latlng, { radius:6, color:'#FF7000' }),
-      onEachFeature: (f,l) => l.bindPopup(f.properties.name || 'Brewery')
+      onEachFeature: (f,l) => l.bindPopup(f.properties.name || 'Skiing')
     }).addTo(map);
   });
